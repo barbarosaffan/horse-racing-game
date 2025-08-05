@@ -1,10 +1,10 @@
 import { defineStore } from 'pinia'
 
-import { HORSE_DATA, RACING_CONFIGURATION } from '@/constants/racing'
-import { GameState, type Horse, type Race, type RaceState } from '@/types/racing'
-import { generateRandomInRange, shuffleArray } from '@/utils/array'
+import { generateRandomInRange, shuffleArray } from '@/core/utils'
+import { HORSE_DATA, RACING_CONFIGURATION } from '@/modules/racing/constants'
+import { GameState, type Horse, type Race, type RaceState } from '@/modules/racing/types'
 
-export type { Horse, Race, RaceResult } from '@/types/racing'
+export type { Horse, Race, RaceResult } from '@/modules/racing/types'
 
 export const useRaceStore = defineStore('race', {
   state: (): RaceState => ({
