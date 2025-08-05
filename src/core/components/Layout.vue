@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
-    <header class="w-full bg-white dark:bg-gray-800 shadow-md h-16 flex-shrink-0">
+    <header class="w-full bg-white dark:bg-gray-800 shadow-md h-auto flex-shrink-0">
       <div class="container mx-auto px-4 h-full flex items-center justify-between">
         <slot name="header" />
       </div>
