@@ -56,6 +56,7 @@ export default defineConfigWithVueTs(
       ],
       'import/newline-after-import': 'error',
       'import/no-duplicates': 'error',
+      'vue/multi-word-component-names': 'off',
     },
   },
 
