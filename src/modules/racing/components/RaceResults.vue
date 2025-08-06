@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Trophy } from 'lucide-vue-next'
+import { Icon } from '@iconify/vue'
 import { storeToRefs } from 'pinia'
 
 import { useRaceStore } from '@/modules/racing/store'
@@ -17,7 +17,7 @@ const { raceResults } = storeToRefs(raceStore)
       v-if="raceResults.length === 0"
       class="flex flex-col items-center text-center text-gray-500 dark:text-gray-400 mt-12"
     >
-      <Trophy class="w-16 h-16 text-gray-400 dark:text-gray-500 mb-4" />
+      <Icon icon="ph:trophy-duotone" class="w-16 h-16 text-gray-400 dark:text-gray-500 mb-4" />
       <p class="font-semibold">No results yet.</p>
       <p class="text-sm">Complete a race to see the outcome here.</p>
     </div>

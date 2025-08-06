@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CheckCircle2, Flag } from 'lucide-vue-next'
+import { Icon } from '@iconify/vue'
 import { storeToRefs } from 'pinia'
 import { computed } from 'vue'
 
@@ -35,12 +35,18 @@ const isCurrent = computed(() => {
     }"
   >
     <div class="mr-3 shrink-0">
-      <CheckCircle2 v-if="isCompleted" class="w-6 h-6 text-green-500" />
-      <Flag v-else class="w-6 h-6 text-gray-500 dark:text-gray-400" />
+      <Icon v-if="isCompleted" icon="ph:check-circle-duotone" class="w-6 h-6 text-green-500" />
+      <Icon
+        v-else-if="isCurrent"
+        icon="ph:hourglass-duotone"
+        class="w-6 h-6 text-blue-500 animate-spin"
+      />
+      <Icon v-else icon="ph:flag-duotone" class="w-6 h-6 text-gray-500 dark:text-gray-400" />
     </div>
     <div class="flex-grow">
       <p class="font-semibold text-gray-800 dark:text-gray-200">Round {{ race.round }}</p>
       <p class="text-sm text-gray-600 dark:text-gray-400">{{ race.distance }}m</p>
     </div>
+    <div v-if="isCurrent" class="text-xs font-bold text-blue-600 dark:text-blue-400">CURRENT</div>
   </li>
 </template>
