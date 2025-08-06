@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Calendar } from 'lucide-vue-next'
 import { storeToRefs } from 'pinia'
 
 import { useRaceStore } from '@/modules/racing/store'
@@ -11,9 +12,11 @@ const { raceSchedule } = storeToRefs(raceStore)
 
 <template>
   <div>
-    <h2 class="text-lg font-bold mb-4 text-gray-800 dark:text-white">Race Program</h2>
+    <h2 class="text-lg font-bold mb-4 text-gray-800 dark:text-white">Race Schedule</h2>
     <div v-if="raceSchedule.length === 0" class="text-center text-gray-500 dark:text-gray-400 mt-8">
-      <p class="text-sm">Generate Program to begin</p>
+      <Calendar class="w-16 h-16 text-gray-400 dark:text-gray-500 mb-4 mx-auto" />
+      <p class="font-semibold">No schedule yet.</p>
+      <p class="text-sm">Generate Schedule to begin</p>
     </div>
     <ul v-else class="space-y-3">
       <RaceScheduleItem

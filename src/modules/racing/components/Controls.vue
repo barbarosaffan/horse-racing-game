@@ -48,9 +48,7 @@ const isRoundCounterVisible = computed(() => {
 
 <template>
   <div class="w-full">
-    <div
-      class="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-y-4 py-2"
-    >
+    <div class="flex flex-col lg:flex-row items-center justify-between gap-y-4 py-2 px-4">
       <h1 class="text-xl font-bold text-gray-800 dark:text-white shrink-0">Horse Racing Game</h1>
       <div v-if="isRoundCounterVisible" class="text-center order-first lg:order-none">
         <span class="font-semibold text-lg text-gray-700 dark:text-gray-300">
@@ -63,7 +61,7 @@ const isRoundCounterVisible = computed(() => {
           @click="initializeAndGenerate"
           variant="primary"
         >
-          Generate Program
+          Generate Schedule
         </BaseButton>
         <BaseButton v-if="isStartButtonAvailable" @click="startRace" variant="success">
           {{ gameState === GameState.PAUSED ? 'Resume' : 'Start' }}
