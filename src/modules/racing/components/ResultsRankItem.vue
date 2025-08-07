@@ -26,5 +26,8 @@ const getMedal = (index: number) => {
       ></div>
       <span class="text-sm font-medium text-gray-700 dark:text-gray-300">{{ ranking.name }}</span>
     </div>
+    <span class="text-sm font-mono text-gray-500 dark:text-gray-400 ml-2"
+      >{{ ranking.time.toFixed(2) }}s</span
+    >
   </li>
 </template>

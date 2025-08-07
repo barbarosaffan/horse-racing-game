@@ -50,7 +50,7 @@ export const HORSE_DATA = {
     '#E74C3C',
     '#F1C40F',
     '#7F8C8D',
-    '#2C3E50',
+    '#000000',
     '#BDC3C7',
   ],
 } as const

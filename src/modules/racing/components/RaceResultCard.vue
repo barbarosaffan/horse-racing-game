@@ -11,7 +11,7 @@ defineProps<Props>()
 </script>
 
 <template>
-  <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4">
+  <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md">
     <h3 class="font-semibold text-gray-800 dark:text-gray-200 mb-2">
       Round {{ result.round }} - {{ result.distance }}m
     </h3>

@@ -124,6 +124,7 @@ export const useRaceStore = defineStore('race', {
           id: horse.id,
           name: horse.name,
           color: horse.color,
+          time: this.raceDurations[horse.id],
         }))
 
       this.raceResults.push({

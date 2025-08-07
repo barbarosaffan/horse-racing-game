@@ -9,6 +9,7 @@ export interface Ranking {
   id: number
   name: string
   color: string
+  time: number
 }
 
 export interface Race {
