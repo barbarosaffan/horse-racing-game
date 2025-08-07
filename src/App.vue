@@ -6,6 +6,7 @@ import ControlPanel from '@/modules/racing/components/Controls.vue'
 import AllHorses from '@/modules/racing/components/HorseList.vue'
 import RaceResultsPanel from '@/modules/racing/components/RaceResults.vue'
 import RaceSchedule from '@/modules/racing/components/RaceSchedule.vue'
+import RaceTrack from '@/modules/racing/components/RaceTrack.vue'
 import HorseList from '@/modules/racing/components/RacingHorseList.vue'
 import { useRaceStore } from '@/modules/racing/store'
 
@@ -32,7 +33,7 @@ const { raceSchedule } = storeToRefs(raceStore)
     </template>
 
     <template #center>
-      <h2 class="text-3xl font-bold mb-4">Race simulation</h2>
+      <RaceTrack />
     </template>
 
     <template #right>
